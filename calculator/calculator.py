@@ -16,4 +16,7 @@ class Calculator:
 
     @staticmethod
     def div(a: float, b: float) -> float:
+        if b == 0:
+            return float('inf')
+
         return a / b
