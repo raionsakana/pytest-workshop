@@ -28,7 +28,7 @@ def test_multiply(a: float, b: float, result: float):
     assert Calculator.multiply(a, b) == pytest.approx(result)
 
 
-@pytest.mark.parametrize('a, result', (((5, 2), 10), ((3, 6), 18)))
+@pytest.mark.parametrize('a, result', (((5, 2, 1), 10), ((3, 6, 1), 18)))
 def test_multiply_many(a: list[float], result: float):
     assert Calculator.multiply(*a) == pytest.approx(result)
 
