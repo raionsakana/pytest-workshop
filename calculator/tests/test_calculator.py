@@ -33,6 +33,6 @@ def test_multiply_many(a: list[float], result: float):
     assert Calculator.multiply(*a) == pytest.approx(result)
 
 
-@pytest.mark.parametrize('a, result', ((5, 2, 2.5),))
+@pytest.mark.parametrize('a, b, result', ((5, 2, 2.5),))
 def test_div(a: float, b: float, result: float):
     assert Calculator.div(a, b) == pytest.approx(result)
