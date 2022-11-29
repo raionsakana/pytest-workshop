@@ -36,3 +36,11 @@ def test_multiply_many(a: list[float], result: float):
 @pytest.mark.parametrize('a, b, result', ((5, 2, 2.5), (10, 5, 2), (10, 0, float('inf'))))
 def test_div(a: float, b: float, result: float):
     assert Calculator.div(a, b) == pytest.approx(result)
+
+
+@pytest.mark.parametrize('a, b, result', ((5, 0, 'you cannot multiply by 0'),))
+def test_multiply_by_0(a: float, b: float, result: str):
+    with pytest.raises(ValueError) as exc:
+        Calculator.multiply(a, b)
+
+    assert result in str(exc.value)
