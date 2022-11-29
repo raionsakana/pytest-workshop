@@ -1,6 +1,9 @@
+from functools import reduce
+
+
 class Calculator:
     @staticmethod
-    def add(*args) -> float:
+    def add(*args: float) -> float:
         return sum(args)
 
     @staticmethod
@@ -8,5 +11,5 @@ class Calculator:
         return a - b
 
     @staticmethod
-    def multiply(a: float, b: float) -> float:
-        return a * b
+    def multiply(*args: float) -> float:
+        return reduce((lambda x, y: x * y), args)
