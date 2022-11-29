@@ -49,3 +49,8 @@ def test_multiply_by_0(a: float, b: float, result: str):
 @pytest.mark.parametrize('a, result', (((5, 5), 5), ((10, 10), 10)))
 def test_avg(a: list[float], result: str):
     assert Calculator.avg(a) == pytest.approx(result)
+
+
+@pytest.mark.parametrize('a, ut, result', (((2, 5, 12, 98), 90, 6.333333),))
+def test_avg_with_ut(a: list[float], ut: float, result: str):
+    assert Calculator.avg(a, ut=ut) == pytest.approx(result)
