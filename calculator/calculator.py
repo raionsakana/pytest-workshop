@@ -12,6 +12,9 @@ class Calculator:
 
     @staticmethod
     def multiply(*args: float) -> float:
+        if any(i == 0 for i in args):
+            raise ValueError('you cannot multiply by 0')
+
         return reduce((lambda x, y: x * y), args)
 
     @staticmethod
