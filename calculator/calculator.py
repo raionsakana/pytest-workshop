@@ -23,3 +23,7 @@ class Calculator:
             return float('inf')
 
         return a / b
+
+    @staticmethod
+    def avg(a: list[float]) -> float:
+        pass
