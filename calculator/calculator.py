@@ -26,4 +26,4 @@ class Calculator:
 
     @staticmethod
     def avg(a: list[float]) -> float:
-        return 5
+        return sum(a) / len(a)
