@@ -26,5 +26,8 @@ class Calculator:
 
     @staticmethod
     def avg(a: list[float], ut: float = float('inf'), lt: float = float('-inf')) -> float:
+        if len(a) == 0:
+            return 0
+
         a = [i for i in a if ut > i > lt]
         return sum(a) / len(a)
