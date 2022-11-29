@@ -13,3 +13,7 @@ class Calculator:
     @staticmethod
     def multiply(*args: float) -> float:
         return reduce((lambda x, y: x * y), args)
+
+    @staticmethod
+    def div(a: float, b: float) -> float:
+        pass
