@@ -9,4 +9,4 @@ class Calculator:
 
     @staticmethod
     def multiply(a: float, b: float) -> float:
-        pass
+        return a * b
