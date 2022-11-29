@@ -21,3 +21,8 @@ def test_add(a: list[float], result: float):
 @pytest.mark.parametrize('a, b, result', ((5, 2, 3), (7, 2, 5)))
 def test_sub_2(a: float, b: float, result: float):
     assert Calculator.sub(a, b) == result
+
+
+@pytest.mark.parametrize('a, b, result', ((5, 2, 10),))
+def test_multiply(a: float, b: float, result: float):
+    assert Calculator.multiply(a, b) == result

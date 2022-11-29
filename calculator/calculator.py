@@ -6,3 +6,7 @@ class Calculator:
     @staticmethod
     def sub(a: float, b: float) -> float:
         return a - b
+
+    @staticmethod
+    def multiply(a: float, b: float) -> float:
+        pass
